@@ -28,7 +28,7 @@ useEffect(() => {
   isDark ? document.body.classList.add("dark") : document.body.classList.remove("dark")
   console.log("Got from Store: "+localStorage.getItem("isDark"));
 
-  fetch('http://localhost:5000/api/products')
+  fetch('http://'+window.location.hostname+':5001/api/products')
   .then(response => response.json())
   .then(data => {setProducts(data)})
 
